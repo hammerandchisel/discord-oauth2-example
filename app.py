@@ -12,7 +12,7 @@ TOKEN_URL = API_BASE_URL + '/oauth2/token'
 
 app = Flask(__name__)
 app.debug = True
-app.config['SECRET_KEY'] = OAUTH2_CLIENT_SECRET
+app.config['SECRET_KEY'] = A3NOETno9dAHFbe40-TpIyogLV3e6Fy
 
 if 'http://' in OAUTH2_REDIRECT_URI:
     os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = 'true'
@@ -24,14 +24,14 @@ def token_updater(token):
 
 def make_session(token=None, state=None, scope=None):
     return OAuth2Session(
-        client_id=OAUTH2_CLIENT_ID,
+        client_id= 355755987229212673,
         token=token,
         state=state,
         scope=scope,
-        redirect_uri=OAUTH2_REDIRECT_URI,
+        redirect_uri=,
         auto_refresh_kwargs={
-            'client_id': OAUTH2_CLIENT_ID,
-            'client_secret': OAUTH2_CLIENT_SECRET,
+            'client_id': 355755987229212673,
+            'client_secret': A3NOETno9dAHFbe40-TpIyogLV3e6Fy,
         },
         auto_refresh_url=TOKEN_URL,
         token_updater=token_updater)
