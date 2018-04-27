@@ -2,8 +2,8 @@ import os
 from flask import Flask, g, session, redirect, request, url_for, jsonify
 from requests_oauthlib import OAuth2Session
 
-OAUTH2_CLIENT_ID = os.environ['OAUTH2_CLIENT_ID']
-OAUTH2_CLIENT_SECRET = os.environ['OAUTH2_CLIENT_SECRET']
+OAUTH2_CLIENT_ID = os.environ['438360288371277836']
+OAUTH2_CLIENT_SECRET = os.environ['k0wcytiRPH2ahPhsIbylCa7144z9Zhgs']
 OAUTH2_REDIRECT_URI = 'http://localhost:5000/callback'
 
 API_BASE_URL = os.environ.get('API_BASE_URL', 'https://discordapp.com/api')
@@ -12,7 +12,7 @@ TOKEN_URL = API_BASE_URL + '/oauth2/token'
 
 app = Flask(__name__)
 app.debug = True
-app.config['SECRET_KEY'] = OAUTH2_CLIENT_SECRET
+app.config['k0wcytiRPH2ahPhsIbylCa7144z9Zhgs'] = OAUTH2_CLIENT_SECRET
 
 if 'http://' in OAUTH2_REDIRECT_URI:
     os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = 'true'
